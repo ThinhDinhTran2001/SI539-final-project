@@ -7,6 +7,9 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -109,6 +112,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: auto;
 }
 
 /* Extend form items to take up more space */
@@ -248,14 +252,11 @@ body.dark-mode .popup-content {
 body.dark-mode .popup-content img {
     border: 1px solid #555;
 }
+
 @media (min-width: 1300px) {
     .dish-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
-    }
-
-    footer {
-        margin-top: 60px;
     }
 }
