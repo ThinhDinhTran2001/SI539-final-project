@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Asian Cuisine</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="myscript.js" defer></script>
 </head>
 <body>
 
@@ -15,7 +15,12 @@
             <h1>Asian Cuisine</h1>
         </div>
         <nav>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -23,24 +28,27 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <!-- Main Content Section -->
+    <main id="main-content">
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Asian Cuisine. All Rights Reserved.</p>
-            <!-- Dark Mode Toggle Button -->
+        <!-- Dark Mode Toggle Button -->
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </footer>
 

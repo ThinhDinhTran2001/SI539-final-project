@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asian Cuisine</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="myscript.js" defer></script>
 </head>
 <body>
 
@@ -15,46 +15,55 @@
             <h1>Asian Cuisine</h1>
         </div>
         <nav>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Featured Dishes Section -->
-    <section id="menu" class="featured-dishes">
-        <h2>Featured Dishes</h2>
-        <div class="dish-grid">
-            <div class="dish">
-                <img src="images/gyoza.png" alt="An image of dumplings">
-                <h3>Gyoza</h3>
-                <p>Steamed to perfection with a savory filling.</p>
-            </div>
-            <div class="dish">
-                <img src="images/tuna-roll.png" alt="An image of sushi">
-                <h3>Sushi Platter</h3>
-                <p>Freshly made sushi with premium ingredients.</p>
-            </div>
-            <div class="dish">
-                <img src="images/ramen.png" alt="An image of ramen">
-                <h3>Spicy Ramen</h3>
-                <p>Warm, spicy, and full of flavors.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>At Asian Cuisine, we bring the best flavors of the East to your table with fresh, authentic ingredients. Our chefs craft each dish with care and passion, from handmade dumplings to flavorful ramen.</p>
-        <p>We believe in offering a dining experience that combines tradition with modern twists, creating memorable moments with every bite.</p>
-    </section>
+    <!-- Main Content Section -->
+    <main id="main-content">
+        <!-- Featured Dishes Section -->
+        <section id="menu" class="featured-dishes">
+            <h2>Featured Dishes</h2>
+            <div class="dish-grid">
+                <div class="dish">
+                    <img src="images/gyoza.png" alt="An image of dumplings">
+                    <h3>Gyoza</h3>
+                    <p>Steamed to perfection with a savory filling.</p>
+                </div>
+                <div class="dish">
+                    <img src="images/tuna-roll.png" alt="An image of sushi">
+                    <h3>Sushi Platter</h3>
+                    <p>Freshly made sushi with premium ingredients.</p>
+                </div>
+                <div class="dish">
+                    <img src="images/ramen.png" alt="An image of ramen">
+                    <h3>Spicy Ramen</h3>
+                    <p>Warm, spicy, and full of flavors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Asian Cuisine, we bring the best flavors of the East to your table with fresh, authentic ingredients. Our chefs craft each dish with care and passion, from handmade dumplings to flavorful ramen.</p>
+            <p>We believe in offering a dining experience that combines tradition with modern twists, creating memorable moments with every bite.</p>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Asian Cuisine. All Rights Reserved.</p>
-            <!-- Dark Mode Toggle Button -->
+        <!-- Dark Mode Toggle Button -->
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </footer>
 

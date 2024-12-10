@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Asian Cuisine</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -15,7 +15,12 @@
             <h1>Asian Cuisine</h1>
         </div>
         <nav>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -23,127 +28,130 @@
         </nav>
     </header>
 
-    <!-- Popup -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <img id="popup-img" src="" alt="Menu Item">
+    <!-- Main Content Section -->
+    <main id="main-content">
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <img id="popup-img" src="" alt="Menu Item">
+            </div>
         </div>
-    </div>
 
-    <section id="menu">
-        <h2>Our Menu</h2>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            
+            <!-- Appetizers -->
+            <div class="menu-category">
+                <h3>Appetizers</h3>
+                <ul>
+                    <li tabindex="0">
+                        <span class="dish-name">Spring Rolls</span>
+                        <span class="dish-price">$5.99</span>
+                        <p>Fresh veggies wrapped in rice paper, served with sweet chili sauce.</p>
+                        <img src="images/spring-rolls.png" alt="An image of Spring Rolls" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Gyoza</span>
+                        <span class="dish-price">$6.99</span>
+                        <p>Pan-fried dumplings filled with pork and vegetables.</p>
+                        <img src="images/gyoza.png" alt="An image of Gyoza" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Tempura</span>
+                        <span class="dish-price">$7.99</span>
+                        <p>Lightly battered and fried shrimp and vegetables.</p>
+                        <img src="images/tempura.png" alt="An image of Tempura" style="display:none;">
+                    </li>
+                </ul>
+            </div>
         
-        <!-- Appetizers -->
-        <div class="menu-category">
-            <h3>Appetizers</h3>
-            <ul>
-                <li tabindex="0">
-                    <span class="dish-name">Spring Rolls</span>
-                    <span class="dish-price">$5.99</span>
-                    <p>Fresh veggies wrapped in rice paper, served with sweet chili sauce.</p>
-                    <img src="images/spring-rolls.png" alt="An image of Spring Rolls" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Gyoza</span>
-                    <span class="dish-price">$6.99</span>
-                    <p>Pan-fried dumplings filled with pork and vegetables.</p>
-                    <img src="images/gyoza.png" alt="An image of Gyoza" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Tempura</span>
-                    <span class="dish-price">$7.99</span>
-                    <p>Lightly battered and fried shrimp and vegetables.</p>
-                    <img src="images/tempura.png" alt="An image of Tempura" style="display:none;">
-                </li>
-            </ul>
-        </div>
-    
-        <!-- Main Courses -->
-        <div class="menu-category">
-            <h3>Main Courses</h3>
-            <ul>
-                <li tabindex="0">
-                    <span class="dish-name">Chicken Teriyaki</span>
-                    <span class="dish-price">$12.99</span>
-                    <p>Grilled chicken glazed with sweet and savory teriyaki sauce.</p>
-                    <img src="images/chicken-teriyaki.png" alt="An image of Chicken Teriyaki" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Beef Bulgogi</span>
-                    <span class="dish-price">$14.99</span>
-                    <p>Korean-style marinated beef, grilled to perfection.</p>
-                    <img src="images/beef-bulgogi.png" alt="An image of Beef Bulgogi" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Pork Dumplings</span>
-                    <span class="dish-price">$10.99</span>
-                    <p>Steamed or pan-fried dumplings filled with savory pork and vegetables.</p>
-                    <img src="images/pork-dumplings.png" alt="An image of Pork Dumplings" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Spicy Tuna Roll</span>
-                    <span class="dish-price">$13.99</span>
-                    <p>Fresh tuna, cucumber, and spicy mayo wrapped in sushi rice and seaweed.</p>
-                    <img src="images/tuna-roll.png" alt="An image of Spicy Tuna Roll" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Shoyu Ramen</span>
-                    <span class="dish-price">$11.99</span>
-                    <p>Rich soy sauce-based broth served with noodles, pork, egg, and vegetables.</p>
-                    <img src="images/ramen.png" alt="An image of Shoyu Ramen" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Vegetable Stir Fry</span>
-                    <span class="dish-price">$9.99</span>
-                    <p>Mixed vegetables stir-fried with a savory sauce.</p>
-                    <img src="images/vegetable-stir-fry.png" alt="An image of Vegetable Stir Fry" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Salmon Sashimi</span>
-                    <span class="dish-price">$15.99</span>
-                    <p>Fresh slices of raw salmon served with soy sauce and wasabi.</p>
-                    <img src="images/sashimi.png" alt="An image of Salmon Sashimi" style="display:none;">
-                </li>
-            </ul>
-        </div>
-    
-        <!-- Desserts -->
-        <div class="menu-category">
-            <h3>Desserts</h3>
-            <ul>
-                <li tabindex="0">
-                    <span class="dish-name">Mochi</span>
-                    <span class="dish-price">$3.99</span>
-                    <p>Sweet rice dough with various fillings.</p>
-                    <img src="images/mochi.png" alt="An image of Mochi" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Green Tea Ice Cream</span>
-                    <span class="dish-price">$4.49</span>
-                    <p>Creamy ice cream with a hint of green tea flavor.</p>
-                    <img src="images/green-tea-ice-cream.png" alt="An image of Green Tea Ice Cream" style="display:none;">
-                </li>
-                <li tabindex="0">
-                    <span class="dish-name">Red Bean Cake</span>
-                    <span class="dish-price">$3.49</span>
-                    <p>Sweet cake filled with red bean paste.</p>
-                    <img src="images/bean-cake.png" alt="An image of Red Bean Cake" style="display:none;">
-                </li>
-                <li tabindex="0"    >
-                    <span class="dish-name">Mango Pudding</span>
-                    <span class="dish-price">$4.99</span>
-                    <p>Silky smooth pudding with fresh mango flavor.</p>
-                    <img src="images/mango-pudding.png" alt="An image of Mango Pudding" style="display:none;">
-                </li>
-            </ul>
-        </div>
-    </section>
+            <!-- Main Courses -->
+            <div class="menu-category">
+                <h3>Main Courses</h3>
+                <ul>
+                    <li tabindex="0">
+                        <span class="dish-name">Chicken Teriyaki</span>
+                        <span class="dish-price">$12.99</span>
+                        <p>Grilled chicken glazed with sweet and savory teriyaki sauce.</p>
+                        <img src="images/chicken-teriyaki.png" alt="An image of Chicken Teriyaki" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Beef Bulgogi</span>
+                        <span class="dish-price">$14.99</span>
+                        <p>Korean-style marinated beef, grilled to perfection.</p>
+                        <img src="images/beef-bulgogi.png" alt="An image of Beef Bulgogi" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Pork Dumplings</span>
+                        <span class="dish-price">$10.99</span>
+                        <p>Steamed or pan-fried dumplings filled with savory pork and vegetables.</p>
+                        <img src="images/pork-dumplings.png" alt="An image of Pork Dumplings" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Spicy Tuna Roll</span>
+                        <span class="dish-price">$13.99</span>
+                        <p>Fresh tuna, cucumber, and spicy mayo wrapped in sushi rice and seaweed.</p>
+                        <img src="images/tuna-roll.png" alt="An image of Spicy Tuna Roll" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Shoyu Ramen</span>
+                        <span class="dish-price">$11.99</span>
+                        <p>Rich soy sauce-based broth served with noodles, pork, egg, and vegetables.</p>
+                        <img src="images/ramen.png" alt="An image of Shoyu Ramen" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Vegetable Stir Fry</span>
+                        <span class="dish-price">$9.99</span>
+                        <p>Mixed vegetables stir-fried with a savory sauce.</p>
+                        <img src="images/vegetable-stir-fry.png" alt="An image of Vegetable Stir Fry" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Salmon Sashimi</span>
+                        <span class="dish-price">$15.99</span>
+                        <p>Fresh slices of raw salmon served with soy sauce and wasabi.</p>
+                        <img src="images/sashimi.png" alt="An image of Salmon Sashimi" style="display:none;">
+                    </li>
+                </ul>
+            </div>
+        
+            <!-- Desserts -->
+            <div class="menu-category">
+                <h3>Desserts</h3>
+                <ul>
+                    <li tabindex="0">
+                        <span class="dish-name">Mochi</span>
+                        <span class="dish-price">$3.99</span>
+                        <p>Sweet rice dough with various fillings.</p>
+                        <img src="images/mochi.png" alt="An image of Mochi" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Green Tea Ice Cream</span>
+                        <span class="dish-price">$4.49</span>
+                        <p>Creamy ice cream with a hint of green tea flavor.</p>
+                        <img src="images/green-tea-ice-cream.png" alt="An image of Green Tea Ice Cream" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Red Bean Cake</span>
+                        <span class="dish-price">$3.49</span>
+                        <p>Sweet cake filled with red bean paste.</p>
+                        <img src="images/bean-cake.png" alt="An image of Red Bean Cake" style="display:none;">
+                    </li>
+                    <li tabindex="0">
+                        <span class="dish-name">Mango Pudding</span>
+                        <span class="dish-price">$4.99</span>
+                        <p>Silky smooth pudding with fresh mango flavor.</p>
+                        <img src="images/mango-pudding.png" alt="An image of Mango Pudding" style="display:none;">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Asian Cuisine. All Rights Reserved.</p>
-            <!-- Dark Mode Toggle Button -->
+        <!-- Dark Mode Toggle Button -->
         <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </footer>
 
